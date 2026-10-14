@@ -1,0 +1,18 @@
+# Binaries
+hostel_mgmt
+test_dsa
+*.exe
+*.out
+
+# Object files & archives
+*.o
+*.a
+*.so
+*.dylib
+
+# Debug symbols
+*.dSYM/
+
+# OS generated files
+.DS_Store
+Thumbs.db
