@@ -289,42 +289,8 @@ Upon loading at startup:
 
 ---
 
-## 🎓 Viva / Presentation Guide
+Team Members
 
-### Common Examiner Questions & Answers
-
-**Q1: Why did you choose a Singly Linked List for students instead of an Array?**
-> *Answer*: The student population in a hostel is dynamic—students enroll and graduate continuously. A linked list allows $O(1)$ memory allocation for each new student on the heap without reallocating contiguous blocks or risking fixed-size overflow. Node insertion and deletion only require updating next pointers.
-
-**Q2: Why use Merge Sort instead of QuickSort for sorting the Linked List?**
-> *Answer*: QuickSort requires random access or bidirectional traversal to efficiently partition around a pivot, which causes high overhead on singly linked lists. Merge Sort, however, accesses sequential memory nodes, splits lists easily using the two-pointer (slow/fast) technique in $O(N)$, and merges two sorted lists in $O(N)$ with no extra array allocation. Its worst-case time complexity is guaranteed $O(N \log N)$.
-
-**Q3: How is fairness guaranteed in the Waiting List?**
-> *Answer*: The waiting list uses a First-In, First-Out (FIFO) Queue implemented with linked nodes. When students apply with no rooms available, they are enqueued at the rear. When a vacancy arises, the student at the front of the queue is dequeued first.
-
-**Q4: How does the system prevent memory leaks?**
-> *Answer*: Every dynamically allocated node (`Student`, `QueueNode`, `StackNode`) is tracked and paired with corresponding cleanup routines (`student_free_list`, `queue_free`, `stack_free`). On program exit, all lists are completely traversed and freed.
-
-**Q5: How is room-student consistency guaranteed across restarts?**
-> *Answer*: Instead of trusting stale room occupancy numbers from disk, `room_sync_occupancies()` iterates through all loaded students and recalculates the exact occupancy and status for every room, eliminating count drift.
-
----
-
-## ✅ Completed & Tested Features Checklist
-
-- [x] Strict C11 compliance using standard C libraries only (`stdio.h`, `stdlib.h`, `string.h`, `ctype.h`, `time.h`).
-- [x] Zero external libraries, no GUI, no C++, runs in terminal on macOS and Linux.
-- [x] Singly Linked List implementation for student records (`struct Student`).
-- [x] Fixed array implementation for rooms (`struct Room`) with statuses `AVAILABLE`, `PARTIAL`, `FULL`.
-- [x] Linked FIFO Queue for fair waiting list management (`WaitingQueue`).
-- [x] Linked LIFO Stack for administrative action audit logging (`ActionStack`).
-- [x] In-place $O(N \log N)$ Merge Sort by Student ID and by Student Name.
-- [x] Automatic vacancy detection on room checkout offering beds to waiting students.
-- [x] Fee management tracking `Total Fee`, `Amount Paid`, and `Pending Balance`.
-- [x] Safe payment recording rejecting negative payments and payments above pending dues.
-- [x] File persistence for students, rooms, and queue with automatic directory creation.
-- [x] Startup integrity sync reconciling room occupancies with allocated students.
-- [x] Polished ASCII UI tables, confirmation prompts, and empty-state messaging.
-- [x] Clean compilation under `-Wall -Wextra -pedantic` with 0 warnings.
-- [x] 70/70 automated assertions passed in unit test suite (`make test`).
-- [x] Comprehensive end-to-end interactive terminal test script (`test_interactive.sh`).
+Ankit. Raj 2502220100141
+Ankush kumar singh 2502220100141
+Ankush Raj 2502220100148
