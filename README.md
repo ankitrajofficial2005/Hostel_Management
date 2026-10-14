@@ -291,6 +291,6 @@ Upon loading at startup:
 
 Team Members
 
-Ankit. Raj 2502220100141
-Ankush kumar singh 2502220100141
-Ankush Raj 2502220100148
+Ankit. Raj 2502220100141,
+Ankush kumar singh 2502220100141,
+Ankush Raj 2502220100148,
